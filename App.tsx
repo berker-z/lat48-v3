@@ -1,8 +1,10 @@
 import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Team } from './components/Team';
+import { Portfolio } from './components/Portfolio';
 import { Footer } from './components/Footer';
 
 // Inline Icon for the App component usage
@@ -22,7 +24,38 @@ const EnvelopeIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
+const ScrollRestoration: React.FC = () => {
+  const { pathname, hash } = useLocation();
+
+  React.useEffect(() => {
+    // On route change (excluding hash-only changes), reset to top
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  }, [pathname]);
+
+  React.useEffect(() => {
+    if (hash) {
+      const target = document.getElementById(hash.replace('#', ''));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+  }, [hash, pathname]);
+
+  return null;
+};
+
+const HomePage: React.FC = () => (
+  <>
+    <Hero />
+    <Services />
+    <Team />
+  </>
+);
+
 function App() {
+
   return (
     <div className="min-h-screen bg-nord-0 text-nord-4 selection:bg-nord-9 selection:text-nord-0 font-mono relative">
       {/* Global Background Grid Lines */}
@@ -30,10 +63,12 @@ function App() {
 
       <div className="relative z-10">
         <Navbar />
+        <ScrollRestoration />
         <main>
-          <Hero />
-          <Services />
-          <Team />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+          </Routes>
         </main>
         <Footer />
       </div>

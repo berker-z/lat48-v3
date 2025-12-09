@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { NAV_LINKS } from '../constants';
 
 export const Navbar: React.FC = () => {
@@ -20,13 +21,13 @@ export const Navbar: React.FC = () => {
       
       <div className="hidden md:flex gap-12">
         {NAV_LINKS.map((link) => (
-          <a 
+          <Link 
             key={link.label} 
-            href={link.href}
+            to={link.href}
             className="type-nav"
           >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
 

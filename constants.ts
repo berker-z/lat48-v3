@@ -1,6 +1,7 @@
-import { ServiceItem, TeamMember, NavLink } from './types';
+import { ServiceItem, TeamMember, NavLink, Partner, PortfolioEvent } from './types';
 import co1Image from './assets/co1.jpg';
 import bz1Image from './assets/bz1.jpg';
+import heroImage from './assets/hero.jpg';
 
 export const SERVICES: ServiceItem[] = [
   {
@@ -64,8 +65,26 @@ export const TEAM: TeamMember[] = [
   }
 ];
 
+export const PARTNERS: Partner[] = [
+  { name: 'Google', url: 'https://www.google.com', logo: heroImage },
+  { name: 'Coinbase', url: 'https://www.coinbase.com', logo: heroImage },
+  { name: 'Chainlink', url: 'https://chain.link', logo: heroImage },
+  { name: 'Circle', url: 'https://www.circle.com', logo: heroImage },
+  { name: 'StarkWare', url: 'https://starkware.co', logo: heroImage },
+  { name: 'Ava Labs', url: 'https://www.avalabs.org', logo: heroImage },
+  { name: 'Polygon', url: 'https://polygon.technology', logo: heroImage },
+  { name: 'EigenLayer', url: 'https://www.eigenlayer.xyz', logo: heroImage },
+];
+
+export const PORTFOLIO_EVENTS: PortfolioEvent[] = [
+  { title: 'Deal Wiv It 01', url: 'https://lu.ma/example-01', location: 'NYC', imageUrl: heroImage },
+  { title: 'Deal Wiv It 02', url: 'https://lu.ma/example-02', location: 'London', imageUrl: heroImage },
+  { title: 'Deal Wiv It 03', url: 'https://lu.ma/example-03', location: 'Singapore', imageUrl: heroImage },
+];
+
 export const NAV_LINKS: NavLink[] = [
-  { label: 'SERVICES', href: '#services' },
-  { label: 'TEAM', href: '#team' },
-  { label: 'CONTACT', href: '#footer' },
+  { label: 'SERVICES', href: '/#services' },
+  { label: 'TEAM', href: '/#team' },
+  { label: 'CONTACT', href: '/#footer' },
+  // { label: 'P', href: '/portfolio' }, // TEMP: Portfolio route for testing
 ];
