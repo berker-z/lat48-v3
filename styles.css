@@ -40,7 +40,7 @@
 /* Display: Hero headlines (massive) */
 .type-display {
   @apply font-bold tracking-tighter text-nord-6 text-8xl md:text-9xl lg:text-[10rem] xl:text-[13rem];
-  line-height: 1.06;
+  line-height: 1.02;
 }
 
 /* H1: Section headers */
