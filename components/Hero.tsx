@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
             {/* Content Row: Text Box + CTA Button side-by-side */}
             <div className="flex flex-col md:flex-row gap-6 max-w-3xl">
                 {/* Text Box - Reduced padding to minimize dead space */}
-                <div className="flex-[2] border border-nord-3 p-6 bg-nord-0/80 backdrop-blur-sm hover:bg-nord-1 transition-colors duration-200">
+                <div className="flex-[2] card card-hover p-6">
                     <p className="type-body opacity-90">
                         Lat48 is a small group of operators who build, guide, and steady early ventures in crypto. We bring discipline, network, and practical support to teams turning intent into products. We believe in momentum.
                     </p>
@@ -52,10 +52,10 @@ export const Hero: React.FC = () => {
                 {/* CTA Box - Hidden on Large Screens (Desktop) */}
                 <a 
                     href="mailto:berker@lat48.io"
-                    className="flex-1 lg:hidden group flex flex-col items-center justify-center p-6 border border-nord-3 bg-nord-0/80 hover:bg-nord-6 hover:border-nord-6 transition-all duration-200 cursor-pointer min-h-[140px] md:min-h-0"
+                    className="flex-1 lg:hidden group flex flex-col items-center justify-center p-6 border border-nord-3 bg-nord-0 hover:bg-nord-6 hover:border-nord-6 transition-all duration-200 cursor-pointer min-h-[140px] md:min-h-0"
                 >
                     <EnvelopeIcon className="w-10 h-10 text-nord-6 group-hover:text-nord-0 mb-4 transition-colors duration-200" />
-                    <span className="type-h3 group-hover:text-nord-0 tracking-wider transition-colors duration-200 text-center whitespace-nowrap">SAY HI</span>
+                    <span className="text-nord-6 group-hover:text-nord-0 font-bold uppercase tracking-wider text-2xl transition-colors duration-200 text-center whitespace-nowrap">SAY HI</span>
                 </a>
             </div>
           </div>

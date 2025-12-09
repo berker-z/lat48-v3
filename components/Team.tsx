@@ -38,11 +38,11 @@ const EnvelopeIcon = ({ className }: { className?: string }) => (
 
 export const Team: React.FC = () => {
   return (
-    <section className="px-4 pb-12" id="team">
+    <section className="section" id="team">
       <SectionHeader title="Core Team" />
 
       {/* Symmetrical Grid Container */}
-      <div className="mt-6 border border-nord-3 bg-nord-0/80 backdrop-blur-sm">
+      <div className="mt-6 card border-nord-3">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {TEAM.map((member, index) => (
             <div 
@@ -84,22 +84,22 @@ export const Team: React.FC = () => {
                 {/* Socials - Aligned Bottom */}
                 <div className="flex gap-6 mt-8 pt-4">
                     {member.linkedin && (
-                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-nord-4 hover:text-nord-8 transition-colors">
+                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="social-link">
                             <LinkedInIcon className="w-6 h-6" />
                         </a>
                     )}
                     {member.telegram && (
-                        <a href={member.telegram} target="_blank" rel="noopener noreferrer" className="text-nord-4 hover:text-nord-8 transition-colors">
+                        <a href={member.telegram} target="_blank" rel="noopener noreferrer" className="social-link">
                             <TelegramIcon className="w-6 h-6" />
                         </a>
                     )}
                     {/* {member.twitter && (
-                        <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="text-nord-4 hover:text-nord-8 transition-colors">
+                        <a href={member.twitter} target="_blank" rel="noopener noreferrer" className="social-link">
                             <TwitterIcon className="w-6 h-6" />
                         </a>
                     )} */}
                     {member.email && (
-                        <a href={`mailto:${member.email}`} className="text-nord-4 hover:text-nord-8 transition-colors">
+                        <a href={`mailto:${member.email}`} className="social-link">
                             <EnvelopeIcon className="w-6 h-6" />
                         </a>
                     )}

@@ -1,108 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lat48 // ADVISORY</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              nord: {
-                0: '#2E3440', // Polar Night (Background)
-                1: '#3B4252',
-                2: '#434C5E',
-                3: '#4C566A', // Comments/Lines
-                4: '#D8DEE9', // Snow Storm (Text)
-                5: '#E5E9F0',
-                6: '#ECEFF4',
-                7: '#8FBCBB', // Frost (Accents)
-                8: '#88C0D0',
-                9: '#81A1C1',
-                10: '#5E81AC',
-                11: '#BF616A', // Aurora (Red/Error)
-              }
-            },
-            fontFamily: {
-              mono: ['"JetBrains Mono"', 'monospace'],
-            },
-            spacing: {
-              '128': '32rem',
-            }
-          }
-        }
-      }
-    </script>
-    <style type="text/tailwindcss">
-      @layer utilities {
-        /* --- TYPOGRAPHY SCHEMA --- */
-        
-        /* The Single Source of Truth for Body Text */
-        .type-body {
-          @apply font-mono text-lg md:text-xl text-nord-4 leading-relaxed;
-        }
 
-        /* Headings */
-        .type-display {
-          @apply font-bold leading-[0.8] tracking-tighter text-nord-6 text-8xl md:text-9xl lg:text-[10rem] xl:text-[13rem];
-        }
-        
-        .type-h1 {
-          @apply font-bold uppercase tracking-tighter text-nord-6 text-5xl md:text-7xl;
-        }
-        
-        .type-h2 {
-          @apply font-bold uppercase tracking-tight text-nord-6 text-2xl md:text-4xl;
-        }
-        
-        .type-h3 {
-          @apply font-bold uppercase tracking-tight text-nord-6 text-2xl md:text-3xl;
-        }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lat48 // ADVISORY</title>
 
-        /* Nav & Labels */
-        .type-nav {
-          @apply font-mono text-lg md:text-xl text-nord-4 uppercase tracking-widest hover:text-nord-8 transition-colors duration-200;
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
 
-        .type-label {
-          @apply font-mono text-lg md:text-xl text-nord-4 uppercase tracking-wider font-bold;
-        }
-        
-        .type-meta {
-           @apply font-mono text-nord-3 uppercase tracking-widest text-sm;
-        }
-      }
-
-      /* Base Styles */
-      body {
-        @apply bg-nord-0 text-nord-4 font-mono;
-      }
-
-      /* Custom scrollbar for Webkit */
-      ::-webkit-scrollbar {
-        width: 12px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #2E3440; 
-        border-left: 1px solid #4C566A;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #4C566A; 
-        border: 1px solid #2E3440;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #88C0D0; 
-      }
-      ::selection {
-        background: #4C566A;
-        color: #ECEFF4;
-      }
-    </style>
+  <!-- Import Map -->
   <script type="importmap">
 {
   "imports": {
@@ -112,10 +21,11 @@
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <div id="root"></div>
+
+<body>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 # LAT48 // DESIGN DIRECTIVE
 
 **STATUS:** ACTIVE
-**VERSION:** 1.3
+**VERSION:** 1.4
 **TARGET:** BLOCKCHAIN ADVISORY FIRM
 
 ## 1. CORE AESTHETIC: TTY FUNCTIONALISM
@@ -14,17 +14,15 @@ The design language is "Documentation as Shrine". We are avoiding the "shadowy h
 
 ## 2. TYPOGRAPHY & LAYOUT (CENTRALIZED SCHEMA)
 
-We utilize a centralized typography schema defined in `index.html`. Do not use raw Tailwind text utilities (e.g., `text-xl`) in components.
+All design tokens are documented in `design.md` and implemented in `styles.css` (Tailwind v4 + `@theme`).
 
-*   **Source of Truth:**
-    *   `.type-display`: Massive hero text.
-    *   `.type-h1`: Section headers.
-    *   `.type-h2`: Card/Item titles.
-    *   `.type-h3`: Brand/Sub-titles.
-    *   `.type-body`: Standard readable text.
-    *   `.type-nav`: Navigation links.
-    *   `.type-label`: Small headers/labels.
-    *   `.type-meta`: Copyright/Footer metadata.
+*   **Token Reference:**
+    *   **Colors:** Nord palette (nord-0 through nord-11) — see `design.md`
+    *   **Typography:** `.type-display`, `.type-h1`, `.type-h2`, `.type-h3`, `.type-body`, `.type-nav`, `.type-label`, `.type-meta` (Display leading 1.06; Body leading 1.2; others use Tailwind defaults)
+    *   **Spacing:** Standard Tailwind scale (see `design.md` for common patterns)
+    *   **Borders:** Solid lines only, using `border-nord-3` (subtle) or `border-nord-4` (visible)
+
+*   **Do Not Use:** Raw Tailwind text utilities (e.g., `text-xl`) in components. Use the type utilities.
 
 *   **Alignment:** Rigid grid. Use solid border lines to define space and enforce structure. **Symmetry is paramount.** Elements must align perfectly with their container edges.
 

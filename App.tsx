@@ -25,13 +25,8 @@ const EnvelopeIcon = ({ className }: { className?: string }) => (
 function App() {
   return (
     <div className="min-h-screen bg-nord-0 text-nord-4 selection:bg-nord-9 selection:text-nord-0 font-mono relative">
-      {/* Global Background Grid Lines - Increased Opacity to 20% */}
-      <div className="fixed inset-0 pointer-events-none opacity-20 z-0" 
-           style={{ 
-             backgroundImage: 'linear-gradient(to right, #4C566A 1px, transparent 1px), linear-gradient(to bottom, #4C566A 1px, transparent 1px)', 
-             backgroundSize: '40px 40px' 
-           }}>
-      </div>
+      {/* Global Background Grid Lines */}
+      <div className="grid-bg"></div>
 
       <div className="relative z-10">
         <Navbar />
@@ -49,7 +44,7 @@ function App() {
         className="fixed right-6 bottom-6 z-50 hidden lg:flex items-center gap-3 px-6 py-4 bg-nord-0 border border-nord-4 text-nord-4 hover:bg-nord-6 hover:text-nord-0 hover:border-nord-6 transition-all duration-300 group cursor-pointer"
       >
           <EnvelopeIcon className="w-6 h-6 group-hover:text-nord-0 transition-colors" />
-          <span className="font-bold tracking-widest group-hover:text-nord-0 transition-colors type-body">SAY HI</span>
+          <span className="font-mono text-lg font-bold tracking-widest group-hover:text-nord-0 transition-colors">SAY HI</span>
       </a>
     </div>
   );

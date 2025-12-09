@@ -1,0 +1,169 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LAT48 DESIGN SYSTEM
+   See design.md for token documentation
+   Tailwind CSS v4 - Uses @theme for design tokens
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import "tailwindcss";
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   THEME: Design Tokens (Nord Palette)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+@theme {
+  /* Colors: Nord Palette */
+  --color-nord-0: #2E3440;
+  --color-nord-1: #3B4252;
+  --color-nord-2: #434C5E;
+  --color-nord-3: #4C566A;
+  --color-nord-4: #D8DEE9;
+  --color-nord-5: #E5E9F0;
+  --color-nord-6: #ECEFF4;
+  --color-nord-7: #8FBCBB;
+  --color-nord-8: #88C0D0;
+  --color-nord-9: #81A1C1;
+  --color-nord-10: #5E81AC;
+  --color-nord-11: #BF616A;
+
+  /* Typography */
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing */
+  --spacing-128: 32rem;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   TYPOGRAPHY UTILITIES
+   Usage: Apply these classes instead of raw text-* utilities
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Display: Hero headlines (massive) */
+.type-display {
+  @apply font-bold tracking-tighter text-nord-6 text-8xl md:text-9xl lg:text-[10rem] xl:text-[13rem];
+  line-height: 1.06;
+}
+
+/* H1: Section headers */
+.type-h1 {
+  @apply font-bold uppercase tracking-tighter text-nord-6 text-5xl md:text-7xl;
+}
+
+/* H2: Card/item titles */
+.type-h2 {
+  @apply font-bold uppercase tracking-tight text-nord-6 text-2xl md:text-4xl;
+}
+
+/* H3: Brand/subtitles */
+.type-h3 {
+  @apply font-bold uppercase tracking-tight text-nord-6 text-2xl md:text-3xl;
+}
+
+/* Body: Readable paragraphs */
+.type-body {
+  @apply font-mono text-lg md:text-xl text-nord-4;
+  line-height: 1.2;
+}
+
+/* Nav: Navigation links */
+.type-nav {
+  @apply font-mono text-lg md:text-xl text-nord-4 uppercase tracking-widest hover:text-nord-8 transition-colors duration-200;
+}
+
+/* Label: Small headers/labels */
+.type-label {
+  @apply font-mono text-lg md:text-xl text-nord-4 uppercase tracking-wider font-bold;
+}
+
+/* Meta: Copyright/footer metadata */
+.type-meta {
+  @apply font-mono text-nord-3 uppercase tracking-widest text-sm;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   BASE STYLES
+   ───────────────────────────────────────────────────────────────────────────── */
+
+html {
+  scroll-padding-top: 4rem;
+  /* Offset for sticky navbar height */
+}
+
+body {
+  @apply bg-nord-0 text-nord-4 font-mono;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   COMPONENT UTILITIES
+   Reusable patterns extracted from components
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Card: Standard bordered container */
+.card {
+  @apply border border-nord-3 bg-nord-0/80 backdrop-blur-sm;
+}
+
+.card-hover {
+  @apply hover:bg-nord-1 transition-colors duration-200;
+}
+
+/* Section: Standard section padding */
+.section {
+  @apply px-4 pb-12;
+}
+
+/* Container: Centered max-width container */
+.container-main {
+  @apply container mx-auto px-4 max-w-screen-2xl;
+}
+
+/* Social Link: Icon hover state */
+.social-link {
+  @apply text-nord-4 hover:text-nord-8 transition-colors;
+}
+
+/* Grid Background: The subtle grid overlay */
+.grid-bg {
+  @apply fixed inset-0 pointer-events-none opacity-20 z-0;
+  background-image:
+    linear-gradient(to right, #4C566A 1px, transparent 1px),
+    linear-gradient(to bottom, #4C566A 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SCROLLBAR (Webkit)
+   ───────────────────────────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2E3440;
+  /* nord-0 */
+  border-left: 1px solid #4C566A;
+  /* nord-3 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4C566A;
+  /* nord-3 */
+  border: 1px solid #2E3440;
+  /* nord-0 */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #88C0D0;
+  /* nord-8 */
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   SELECTION
+   ───────────────────────────────────────────────────────────────────────────── */
+
+::selection {
+  background: #4C566A;
+  /* nord-3 */
+  color: #ECEFF4;
+  /* nord-6 */
+}

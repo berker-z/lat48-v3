@@ -4,10 +4,10 @@ import { SectionHeader } from './SectionHeader';
 
 export const Services: React.FC = () => {
   return (
-    <section className="px-4 pb-12" id="services">
+    <section className="section" id="services">
       <SectionHeader title="Offerings" />
       
-      <div className="mt-6 border-t border-l border-nord-3 bg-nord-0/80 backdrop-blur-sm">
+      <div className="mt-6 border-t border-l border-nord-3 card">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
             <div 
