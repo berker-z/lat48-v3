@@ -1,20 +1,13 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# LAT48 Site
 
-# Run and deploy your AI Studio app
+Website for LAT48, a boutique team of operators who build, guide, and steady early ventures in crypto.
 
-This contains everything you need to run your app locally.
+## Stack
 
-View your app in AI Studio: https://ai.studio/apps/drive/1h0XlPu0hswrufDFS6J_jfe8qsIT9qPVs
+- Vite + React + TypeScript
+- Tailwind (CDN config in `index.html` with a Nord-inspired palette and typography utilities)
 
-## Run Locally
+## Dev Notes
 
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+- Mostly vibecoded; design tokens live inline in `index.html` and components lean on those utilities rather than a full design system.
+- Install and run: `npm install` then `npm run dev`
