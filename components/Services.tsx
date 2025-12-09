@@ -5,7 +5,7 @@ import { SectionHeader } from './SectionHeader';
 export const Services: React.FC = () => {
   return (
     <section className="section" id="services">
-      <SectionHeader title="Offerings" />
+      <SectionHeader title="Services" />
       
       <div className="mt-6 border-t border-l border-nord-3 card">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
