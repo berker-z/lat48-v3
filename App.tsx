@@ -4,7 +4,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Services } from './components/Services';
 import { Team } from './components/Team';
-import { Portfolio } from './components/Portfolio';
+import { PartnersSection, EventsSection } from './components/Portfolio';
 import { Footer } from './components/Footer';
 
 // Inline Icon for the App component usage
@@ -54,6 +54,13 @@ const HomePage: React.FC = () => (
   </>
 );
 
+const PortfolioPage: React.FC = () => (
+  <>
+    <PartnersSection />
+    <EventsSection />
+  </>
+);
+
 function App() {
 
   return (
@@ -67,7 +74,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
           </Routes>
         </main>
         <Footer />
