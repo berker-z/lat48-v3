@@ -1,4 +1,6 @@
 import { ServiceItem, TeamMember, NavLink } from './types';
+import co1Image from './assets/co1.jpg';
+import bz1Image from './assets/bz1.jpg';
 
 export const SERVICES: ServiceItem[] = [
   {
@@ -41,10 +43,11 @@ export const TEAM: TeamMember[] = [
     bio: [
       'Craig builds networks that move. He aligns stakeholders, sets motion, and stays embedded until outcomes materialize.'
     ],
-    imageUrl: 'https://picsum.photos/400/400?grayscale&contrast=1.2',
-    twitter: 'https://twitter.com',
-    linkedin: 'https://linkedin.com',
-    telegram: 'https://t.me/something'
+    imageUrl: co1Image,
+    twitter: 'https://x.com/Cryptofinomic',
+    linkedin: 'https://www.linkedin.com/in/craigjolson/',
+    telegram: 'https://t.me/cryptofinomic',
+    email: 'craig@lat48.io'
   },
   {
     id: '02',
@@ -53,10 +56,11 @@ export const TEAM: TeamMember[] = [
     bio: [
       'Berker turns uncertain ambition into working systems. He navigates the messy middle between vision, users, and teams, and keeps the pace from collapsing.'
     ],
-    imageUrl: 'https://picsum.photos/401/401?grayscale&contrast=1.2',
-    twitter: 'https://twitter.com',
-    linkedin: 'https://linkedin.com',
-    telegram: 'https://t.me/something'
+    imageUrl: bz1Image,
+    twitter: 'https://x.com/realluvbby',
+    linkedin: 'https://www.linkedin.com/in/berkerz/',
+    telegram: 'https://t.me/berkerz',
+    email: 'berker@lat48.io'
   }
 ];
 

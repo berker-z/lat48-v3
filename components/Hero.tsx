@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImage from '../assets/hero.jpg';
 
 const EnvelopeIcon = ({ className }: { className?: string }) => (
   <svg 
@@ -50,7 +51,7 @@ export const Hero: React.FC = () => {
 
                 {/* CTA Box - Hidden on Large Screens (Desktop) */}
                 <a 
-                    href="mailto:hello@lat48.sys"
+                    href="mailto:berker@lat48.io"
                     className="flex-1 lg:hidden group flex flex-col items-center justify-center p-6 border border-nord-3 bg-nord-0/80 hover:bg-nord-6 hover:border-nord-6 transition-all duration-200 cursor-pointer min-h-[140px] md:min-h-0"
                 >
                     <EnvelopeIcon className="w-10 h-10 text-nord-6 group-hover:text-nord-0 mb-4 transition-colors duration-200" />
@@ -74,7 +75,7 @@ export const Hero: React.FC = () => {
                 {/* Layer 2: Image Container (Middle) */}
                 <div className="relative z-10 w-full h-full border border-nord-4 bg-nord-0/50 backdrop-blur-sm flex items-center justify-center overflow-hidden">
                     <img 
-                        src="https://picsum.photos/800/800?grayscale" 
+                        src={heroImage} 
                         alt="Abstract Data Center" 
                         className="w-full h-full object-cover filter contrast-125 brightness-75 grayscale mix-blend-multiply opacity-80"
                     />

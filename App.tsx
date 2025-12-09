@@ -45,7 +45,7 @@ function App() {
       
       {/* Floating CTA: Hidden on Mobile/Tablet, Visible on Desktop (lg+) */}
       <a 
-        href="mailto:hello@lat48.sys"
+        href="mailto:berker@lat48.io"
         className="fixed right-6 bottom-6 z-50 hidden lg:flex items-center gap-3 px-6 py-4 bg-nord-0 border border-nord-4 text-nord-4 hover:bg-nord-6 hover:text-nord-0 hover:border-nord-6 transition-all duration-300 group cursor-pointer"
       >
           <EnvelopeIcon className="w-6 h-6 group-hover:text-nord-0 transition-colors" />

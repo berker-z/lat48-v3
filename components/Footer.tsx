@@ -32,16 +32,16 @@ export const Footer: React.FC = () => {
             <div>
                 <h4 className="type-label text-nord-3 text-sm mb-4">Connect</h4>
                 <ul className="space-y-3">
-                    <li><a href="mailto:hello@lat48.sys" className="type-nav block !text-base">Email</a></li>
-                    <li><a href="#" className="type-nav block !text-base">Calendly</a></li>
-                    <li><a href="#" className="type-nav block !text-base">Telegram</a></li>
+                    <li><a href="mailto:berker@lat48.io" className="type-nav block !text-base">Email</a></li>
+                    <li><a href="https://calendly.com/berker-lat48" target="_blank" rel="noopener noreferrer" className="type-nav block !text-base">Calendly</a></li>
+                    <li><a href="https://t.me/+HcsHbqoIGkplNDhh" target="_blank" rel="noopener noreferrer" className="type-nav block !text-base">Telegram</a></li>
                 </ul>
             </div>
             <div>
                 <h4 className="type-label text-nord-3 text-sm mb-4">Network</h4>
                 <ul className="space-y-3">
-                    <li><a href="#" className="type-nav block !text-base">Twitter / X</a></li>
-                    <li><a href="#" className="type-nav block !text-base">LinkedIn</a></li>
+                    <li><a href="https://x.com/Lat48vc" target="_blank" rel="noopener noreferrer" className="type-nav block !text-base">Twitter / X</a></li>
+                    <li><a href="https://www.linkedin.com/company/lat48vc/" target="_blank" rel="noopener noreferrer" className="type-nav block !text-base">LinkedIn</a></li>
                 </ul>
             </div>
         </div>

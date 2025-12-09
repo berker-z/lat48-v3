@@ -13,6 +13,7 @@ export interface TeamMember {
   twitter?: string;
   linkedin?: string;
   telegram?: string;
+  email?: string;
 }
 
 export interface NavLink {
